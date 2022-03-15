@@ -10,7 +10,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.ts', 'tsx', 'js.', 'scss'],
+    extensions: ['.ts', '.tsx', '.js', '.scss'],
     alias: {
       '@': path.join(__dirname, 'src')
     }
@@ -35,15 +35,29 @@ module.exports = {
             }
           },
           {
-            loader: 'scss-loader'
+            loader: 'sass-loader'
           }
         ]
       }
     ]
   },
   devServer: {
-    contentBase: './public',
-    writeToDisk: true,
+    static: {
+      directory: path.join(__dirname, 'public')
+    },
+    compress: true,
+    devMiddleware: {
+      writeToDisk: true
+    },
+    client: {
+      reconnect: true,
+      progress: true,
+      overlay: {
+        errors: true,
+        warnings: false
+      },
+      logging: 'info'
+    },
     historyApiFallback: true
   },
   externals: {

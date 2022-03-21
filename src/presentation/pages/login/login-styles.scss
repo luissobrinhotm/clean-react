@@ -1,4 +1,5 @@
 @import "../../styles/global";
+@use "sass:map";
 
 .login {
   display: flex;
@@ -25,6 +26,15 @@
 
     .submit {
       margin-top: 32px;
+
+      &:disabled {
+        background-color: $disabledBg;
+        color: $disabledText;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
 
     .link {

@@ -1,0 +1,5 @@
+export { default as LoginFooter } from '@/presentation/components/footer/login-footer'
+export { default as LoginHeader } from '@/presentation/components/login-header/login-header'
+export { default as Logo } from '@/presentation/components/logo/logo'
+export { default as Router } from '@/presentation/components/router/router'
+export { default as Spinner } from '@/presentation/components/spinner/spinner'

@@ -47,6 +47,10 @@ module.exports = {
     },
     compress: true,
     devMiddleware: {
+      index: true,
+      mimeTypes: { phtml: 'text/html' },
+      publicPath: '/public',
+      serverSideRender: true,
       writeToDisk: true
     },
     client: {

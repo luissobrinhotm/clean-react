@@ -1,11 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Login from '@/presentation/pages/login/login'
-//
-// const Main: React.FC = () => {
-//
-// }
+import Router from '@/presentation/components/router/router'
+
 ReactDOM.render(
-    <Login/>,
+    <Router/>,
     document.getElementById('main')
 )
